@@ -1,0 +1,33 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.env
+
+# Django
+db.sqlite3
+/staticfiles/
+/media/
+/*.log
+
+# Environment Variables
+.env
+
+# macOS
+.DS_Store
+
+# Virtual Environment
+venv/
+env/
+ENV/
+venv.bak/
+venv.bak/
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Git
+.git
+.gitignore
