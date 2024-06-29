@@ -7,15 +7,9 @@ COPY . /app
 
 RUN apt-get update && \
     apt-get install -y python3 python3-pip && \
-    pip install -r requirement.txt
-    cd app && \
+    pip install -r requirement.txt && \
     virtualenv env && \
-    cd env/scripts && \
-    cd .. && \
-    cd .. && \
-    
+    ./env/bin/pip install -r requirement.txt
 
-ENTRYPOINT ["python3"]
-CMD ["manage.py","runserver","0.0.0.0:8000"]    
-
-
+ENTRYPOINT ["./env/bin/python3"]
+CMD ["manage.py", "runserver", "0.0.0.0:8000"]
