@@ -2,7 +2,7 @@ FROM ubuntu
 
 WORKDIR /app
 
-COPY requirement.txt /app
+COPY requirements.txt /app
 COPY . /app
 
 RUN apt-get update && \
